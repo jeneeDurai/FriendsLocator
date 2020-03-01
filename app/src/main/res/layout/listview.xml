@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="291dp"
+            android:layout_height="109dp"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/relativeLayout3">
+
+            <TextView
+                android:id="@+id/tv_locality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/tv_locality"
+                app:srcCompat="@android:drawable/ic_menu_myplaces"
+                tools:layout_editor_absoluteX="94dp"
+                tools:layout_editor_absoluteY="177dp" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/tv_address"
+                app:srcCompat="@android:drawable/ic_menu_call" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_locality"
+                android:layout_toEndOf="@id/imageView4"
+                android:layout_marginStart="8dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tv_address"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/imageView6"
+                android:text="TextView" />
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="96dp"
+        android:layout_height="101dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        android:id="@+id/relativeLayout3">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@mipmap/ic_launcher" />
+    </RelativeLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context="com.jenee.friendslocator.ui.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/button"
+            android:width="250dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Where is your Friends?"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/searchEditText"
+            android:layout_alignBottom="@+id/searchEditText"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/colorPrimary"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:onClick="geoLocate"
+            android:text="Search"
+            android:textColor="@color/colorAccent" />
+
+        <fragment
+            android:id="@+id/mapFragment"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/searchEditText" />
+
+        <ImageButton
+            android:id="@+id/friendsListButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignBottom="@+id/mapFragment"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="22dp"
+            android:layout_marginEnd="18dp"
+            android:width="20px"
+            android:adjustViewBounds="true"
+            android:background="@drawable/rounded_button"
+            android:onClick="navigateToFriendsDetails"
+            android:padding="20dp"
+            android:src="@mipmap/logo_user_mini"
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

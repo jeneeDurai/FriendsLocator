@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jenee.friendslocator.ui.WelcomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <ImageView
+            android:id="@+id/logoUser"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignTop="@+id/logoRound"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/logo_user" />
+
+        <ImageView
+            android:id="@+id/logoRound"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignStart="@+id/logoUser"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/logo_round" />
+
+        <TextView
+            android:id="@+id/logoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/logoUser"
+            android:layout_below="@+id/logoUser"
+            android:layout_marginTop="15dp"
+            android:text="Friends Locator"
+            android:textColor="@color/colorAccent"
+            android:layout_centerHorizontal="true"
+            android:textSize="30dp" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

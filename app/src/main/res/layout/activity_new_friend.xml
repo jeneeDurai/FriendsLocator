@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jenee.friendslocator.ui.NewFriendActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <EditText
+            android:id="@+id/editTextFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:width="200dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/editTextLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relativeLayout"
+            android:layout_toEndOf="@+id/editTextFirstName"
+            android:width="200dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/editTextLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editTextLastName"
+            android:width="200dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Search Location"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/editTextPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editTextLocation"
+            android:width="200dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Phone Number"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/searchButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/editTextLocation"
+            android:layout_toEndOf="@+id/editTextLocation"
+            android:backgroundTint="@color/colorPrimary"
+            android:drawableTop="@android:drawable/ic_menu_search"
+            android:onClick="geoLocate"
+            android:textColor="@color/colorAccent" />
+
+
+        <fragment
+            android:id="@+id/mapFragment2"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editTextPhoneNumber"
+            tools:layout_editor_absoluteY="99dp" />
+
+        <Button
+            android:id="@+id/AddNewButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/mapFragment2"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/colorPrimary"
+            android:onClick="addData"
+            android:text="Add new friend"
+            android:textColor="@color/colorAccent" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextFirstName"
+            android:layout_toEndOf="@+id/searchButton">
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/editTextLastName"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/searchButton"
+            app:srcCompat="@mipmap/user_image" />
+
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

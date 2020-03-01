@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jenee.friendslocator.ui.UpdateFriendActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <EditText
+            android:id="@+id/updateEditTextFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:width="200dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/updateEditTextLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relativeLayout"
+            android:layout_toEndOf="@+id/updateEditTextFirstName"
+            android:width="200dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/updateEditTextLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/updateEditTextLastName"
+            android:width="200dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Search Location"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/updateEditTextPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/updateEditTextLocation"
+            android:width="200dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Phone Number"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/updateSearchButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/updateEditTextLocation"
+            android:layout_toEndOf="@+id/updateEditTextLocation"
+            android:backgroundTint="@color/colorPrimary"
+            android:drawableTop="@android:drawable/ic_menu_search"
+            android:onClick="geoLocate"
+            android:textColor="@color/colorAccent" />
+
+
+        <fragment
+            android:id="@+id/updateMapFragment"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/updateEditTextPhoneNumber"
+            tools:layout_editor_absoluteY="99dp" />
+
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/updateMapFragment"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/colorOrange"
+            android:text="Update"
+            android:textColor="@color/colorAccent" />
+
+        <ImageView
+            android:id="@+id/updateImageView5"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/updateEditTextLastName"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/updateSearchButton"
+            app:srcCompat="@mipmap/user_image" />
+
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
